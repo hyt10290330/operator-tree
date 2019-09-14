@@ -1,4 +1,7 @@
-# 正在建设中, API 接口模拟
+# TODO
+
+1.API 接口模拟(express + 本地 data.json + mock.js + vue.config.js 配置接口代理防止跨域冲突)
+2.example 引用组件 编写 demog
 
 ## API
 
@@ -41,3 +44,7 @@ interface MoveForm<T> {
 | select | 选中节点对应 key | string   |        |
 
 ### Component Images
+
+![Image text](https://github.com/hyt10290330/operator-tree/blob/master/images/1.png)
+![Image text](https://github.com/hyt10290330/operator-tree/blob/master/images/2.png)
+![Image text](https://github.com/hyt10290330/operator-tree/blob/master/images/3.png)
