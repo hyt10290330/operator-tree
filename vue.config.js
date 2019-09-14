@@ -1,5 +1,7 @@
-require('./mock')
-
+// require('./mock')
+if (process.env.NODE_ENV !== 'production') {
+  require('./mock')
+}
 module.exports = {
   pages: {
     index: {
