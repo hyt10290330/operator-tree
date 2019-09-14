@@ -1,4 +1,4 @@
-import { lang, format } from 'utils/i18n'
+import { lang, format } from './i18n'
 
 const messages = {
   zh: {

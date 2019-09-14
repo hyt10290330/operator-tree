@@ -10,6 +10,10 @@ module.exports = {
     module: {
       rules: [
         {
+          test: /\.vue$/,
+          loader: 'vue-loader',
+        },
+        {
           test: /\.tsx?$/,
           use: {
             loader: 'ts-loader',
@@ -21,6 +25,9 @@ module.exports = {
           loader: '@kazupon/vue-i18n-loader',
         },
       ],
+    },
+    resolve: {
+      extensions: ['.ts', '.tsx', '.js', '.jsx', '.styl', '.vue'], //后缀名自动补全
     },
   },
 }
