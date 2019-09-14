@@ -1,7 +1,7 @@
 <template>
-  <yk-status-container
+  <status-container
     :status="status"
-    class="yk-operation-tree-search-result"
+    class="operation-tree-search-result"
     emptySize="small"
   >
     <div
@@ -16,20 +16,20 @@
       <span class="result-left">{{ item.title }}</span>
       <span class="result-right">{{ item.parentTitle }}</span>
     </div>
-  </yk-status-container>
+  </status-container>
 </template>
 
 <script lang="ts">
 import { Vue, Component, Prop, Watch } from 'vue-property-decorator'
 
-import YkStatusContainer, {
+import StatusContainer, {
   ContainerStatus,
-} from 'components/layout/container/StatusContainer.vue'
+} from '../../status-container/src/status-container.vue'
 import { SearchNode, OperationTreeSearchResultItem } from './OperationTree.vue'
 
 @Component({
   components: {
-    YkStatusContainer,
+    StatusContainer,
   },
 })
 export default class OperationTreeSearchResult extends Vue {
@@ -73,7 +73,7 @@ export default class OperationTreeSearchResult extends Vue {
 <style lang="stylus" scoped>
 @import '~style/helper'
 
-.yk-operation-tree-search-result
+.operation-tree-search-result
   .result-item
     display flex
     padding 5px

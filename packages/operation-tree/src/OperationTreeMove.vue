@@ -46,14 +46,12 @@ import _ from 'lodash'
 import YkModal from 'components/feedback/modal/Modal.jsx'
 import YkHeader from 'components/layout/header/Header.vue'
 
-import formConfig from 'pages/index/config/antd/form'
-
 import {
   getIcon,
   getLoadData,
   getTreeNode,
   mapTreeNode,
-} from 'components/_utils/tree'
+} from '../../_utils/tree'
 
 import {
   OperationLoadTreeData,

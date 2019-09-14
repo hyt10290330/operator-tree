@@ -50,7 +50,7 @@ import { Vue, Component, Prop, Watch, Model } from 'vue-property-decorator'
 import YkModal from 'components/feedback/modal/Modal.jsx'
 import { OperationTreeNode, UpdateTreeNode } from './OperationTree.vue'
 
-import formConfig from 'pages/index/config/antd/form'
+import { getCommonValidateMessages } from '../../_utils/validate'
 
 @Component({
   components: {
@@ -94,7 +94,7 @@ export default class OperationTreeName extends Vue {
 
   beforeCreate(): void {
     this.form = this.$form.createForm(this, {
-      validateMessages: formConfig.validateMessages,
+      validateMessages: getCommonValidateMessages(),
       onValuesChange: (props, values) => {
         if (typeof values.name !== 'undefined') {
           this.name = values.name

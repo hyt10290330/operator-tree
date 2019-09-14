@@ -24,10 +24,21 @@
 <template>
   <div class="operation-tree">
     <div class="tree-header">
-      <div :title="$t('division', [objectTitle])" @click="onDivision" class="tree-header-add">
-        <icon class="icon" type="icon-folder-add" />
+      <div
+        :title="$t('division', [objectTitle])"
+        @click="onDivision"
+        class="tree-header-add"
+      >
+        <icon
+          class="icon"
+          type="icon-folder-add"
+        />
       </div>
-      <search-input @search="onSearch" style="flex: 1" v-model="searchKeyword"></search-input>
+      <search-input
+        @search="onSearch"
+        style="flex: 1"
+        v-model="searchKeyword"
+      ></search-input>
     </div>
     <div class="tree-body scrollbar">
       <a-tree
@@ -53,21 +64,38 @@
             @visibleChange="onDropdownToggle($event, key)"
             class="tree-dropdown"
           >
-            <a class="ant-dropdown-link" href="javascript:;">
+            <a
+              class="ant-dropdown-link"
+              href="javascript:;"
+            >
               <icon type="icon-gengduo" />
             </a>
-            <a-menu @click="onClickMenu($event, key)" slot="overlay">
+            <a-menu
+              @click="onClickMenu($event, key)"
+              slot="overlay"
+            >
               <a-menu-item key="subdivision">
                 <a href="javascript:;">{{ $t('subdivision', [objectTitle]) }}</a>
               </a-menu-item>
-              <a-menu-item key="modify" v-if="allowUpdateRootName || !isRootNode(key)">
+              <a-menu-item
+                key="modify"
+                v-if="allowUpdateRootName || !isRootNode(key)"
+              >
                 <a href="javascript:;">{{ $t('modify') }}</a>
               </a-menu-item>
-              <a-menu-item key="move" v-if="!isRootNode(key)">
-                <a href="
-                javascript:;">{{ $t('move', [objectTitle]) }}</a>
+              <a-menu-item
+                key="move"
+                v-if="!isRootNode(key)"
+              >
+                <a
+                  href="
+                javascript:;"
+                >{{ $t('move', [objectTitle]) }}</a>
               </a-menu-item>
-              <a-menu-item key="delete" v-if="!isRootNode(key)">
+              <a-menu-item
+                key="delete"
+                v-if="!isRootNode(key)"
+              >
                 <a href="
                 javascript:;">{{ $t('delete') }}</a>
               </a-menu-item>
@@ -350,8 +378,8 @@ export default class OperationTree extends Vue {
         break
       case 'delete':
         this.$confirm({
-          title: this.$t('deleteTitle', [node.title]) as string,
-          content: this.$t('deleteContent') as string,
+          title: (this as any).$t('deleteTitle', [node.title]) as string,
+          content: (this as any).$t('deleteContent') as string,
           onOk: () => {
             this.deleteNode(node)
               .then(() => {
@@ -528,82 +556,68 @@ export default class OperationTree extends Vue {
 </script>
 
 <style lang="stylus" scoped>
-@import '~style/helper';
+@import '~style/helper'
 
-.operation-tree {
-  display: flex;
-  flex-direction: column;
-  max-height: 100%;
-  width: 100%;
+.operation-tree
+  display flex
+  flex-direction column
+  max-height 100%
+  width 100%
 
-  .tree-header {
-    display: flex;
-    height: 32px;
+  .tree-header
+    display flex
+    height 32px
 
-    &-add {
-      flex_both_middle();
-      margin-right: 16px;
-      padding: 8px 0;
-      width: 32px;
-      height: 32px;
-      border-radius: 4px;
-      background: $deepblue;
-      color: $white;
-      text-align: center;
-      font-size: 16px;
-      line-height: 32px;
-      cursor: pointer;
+    &-add
+      flex_both_middle()
+      margin-right 16px
+      padding 8px 0
+      width 32px
+      height 32px
+      border-radius 4px
+      background $deepblue
+      color $white
+      text-align center
+      font-size 16px
+      line-height 32px
+      cursor pointer
 
-      >>>.icon {
-        top: 0;
-        margin-left: 0;
-      }
-    }
-  }
+      >>>.icon
+        top 0
+        margin-left 0
 
-  .tree-body {
-    flex: 1;
-    overflow-x: hidden;
-    overflow-y: auto;
-    margin-top: 12px;
+  .tree-body
+    flex 1
+    overflow-x hidden
+    overflow-y auto
+    margin-top 12px
 
-    >>>.ant-tree-node-content-wrapper {
-      ellipsis();
-      position: relative;
-      padding-right: 36px;
-      padding-left: 0;
-      width: 100%;
+    >>>.ant-tree-node-content-wrapper
+      ellipsis()
+      position relative
+      padding-right 36px
+      padding-left 0
+      width 100%
 
-      .tree-dropdown {
-        position: absolute;
-        top: 0;
-        right: 26px;
-        display: none;
-        color: rgba($black, 0.75);
-      }
+      .tree-dropdown
+        position absolute
+        top 0
+        right 26px
+        display none
+        color rgba($black,.75)
 
-      &:not(.ant-tree-node-selected):hover {
-        background-color: $transparentblue;
-      }
+      &:not(.ant-tree-node-selected):hover
+        background-color $transparentblue
 
-      &.ant-tree-node-selected, &:hover {
-        .tree-dropdown {
-          display: inline-block;
-        }
-      }
-    }
+      &.ant-tree-node-selected, &:hover
+        .tree-dropdown
+          display inline-block
 
-    >>>.tree-dropdown-node {
-      > .ant-tree-node-content-wrapper:not(.ant-tree-node-selected) {
-        background-color: $transparentblue;
-      }
+    >>>.tree-dropdown-node
+      > .ant-tree-node-content-wrapper:not(.ant-tree-node-selected)
+        background-color $transparentblue
 
-      > .ant-tree-node-content-wrapper {
-        .tree-dropdown {
-          display: inline-block;
-        }
-      }
-    }
-  }
-}
+      > .ant-tree-node-content-wrapper
+        .tree-dropdown
+          display inline-block
 </style>
