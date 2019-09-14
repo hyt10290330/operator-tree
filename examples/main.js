@@ -1,4 +1,4 @@
-import Vue from 'vue'
+import Vue from './node_modules/vue'
 import App from './App.vue'
 
 Vue.config.productionTip = false
