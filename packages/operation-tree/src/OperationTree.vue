@@ -120,7 +120,7 @@ import { TreeNode } from 'ant-design-vue/types/tree-node'
 import Icon from '../../icon'
 import SearchInput from '../../search-input'
 import Modal from '../../modal'
-import { NormalizedSelectTreeNode } from 'components/entry/select/DepartmentSelect.vue'
+import { NormalizedSelectTreeNode } from '../../department-select/src/department-select.vue'
 
 import OperationTreeDivision from './OperationTreeDivision.vue'
 import OperationTreeMove, { ExcludeMoveTreeNode } from './OperationTreeMove.vue'

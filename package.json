@@ -12,6 +12,7 @@
     "core-js": "^2.6.5",
     "lib": "vue-cli-service build --target lib --name nodeselect --dest lib packages/index.js",
     "lodash": "^4.17.15",
+    "react": "^16.9.0",
     "throttle-debounce": "^2.1.0",
     "vue": "^2.6.10"
   },
