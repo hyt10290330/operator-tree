@@ -21,8 +21,9 @@
 
 ## TODO
 
-1.API 接口模拟(express + 本地 data.json + mock.js + vue.config.js 配置接口代理防止跨域冲突)
-2.example 引用组件 编写 demog
+#### 1.API 接口模拟(express + 本地 data.json + mock.js + vue.config.js 配置接口代理防止跨域冲突)
+
+#### 2.example 引用组件 编写 demog
 
 ### OperationTree
 
