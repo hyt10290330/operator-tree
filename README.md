@@ -1,9 +1,28 @@
-# TODO
+# operator-tree
+
+基于 ant-design-vue 对操作树组件
+
+> **Note:** Examples are as follows:
+
+```html
+<yk-operation-tree
+  :addNode="addNode"
+  :deleteNode="deleteNode"
+  :loadTreeData="loadTreeData"
+  :moveNode="moveNode"
+  :searchNode="searchNode"
+  :updateNodeName="updateNodeName"
+  objectTitle="分类"
+></yk-operation-tree>
+```
+
+```js
+```
+
+## TODO
 
 1.API 接口模拟(express + 本地 data.json + mock.js + vue.config.js 配置接口代理防止跨域冲突)
 2.example 引用组件 编写 demog
-
-## API
 
 ### OperationTree
 
