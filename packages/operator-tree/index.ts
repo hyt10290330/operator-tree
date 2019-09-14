@@ -1,8 +1,8 @@
+/* eslint-disable */
 import OperationTree from './src/OperationTree.vue'
 import Vue from 'vue'
-// eslint-disable-next-line
-;(<any>OperationTree).install = (vue: Vue) => {
-  Vue.component(OperationTree.name, OperationTree)
-}
-// eslint-disable-next-line
+// ;(OperationTree as any).install = (vue: Vue) => {
+//   Vue.component(OperationTree.name, OperationTree)
+// }
+
 export default OperationTree
