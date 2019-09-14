@@ -1,3 +1,5 @@
+require('./mock')
+
 module.exports = {
   pages: {
     index: {
